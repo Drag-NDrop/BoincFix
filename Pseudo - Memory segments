@@ -1,0 +1,16 @@
+
+
+MemorySegment_Configuration #1 contains the configuration of the IdleRunner.
+value type: strings
+
+
+
+
+
+MemorySegment_Activity #2 contains the ActivityTracking of the system, IdleRunner is installed on.
+# Line 1: The global summarized state across all users.
+    - Value type: Bool.
+    - True: The system is active
+    - False: The system is inactive
+# Line 2: Was an action for the current state already executed?
+    - Value type: Bool. 
