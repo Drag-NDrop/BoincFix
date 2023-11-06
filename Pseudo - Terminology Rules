@@ -1,11 +1,9 @@
-
-
 Our main objective is to track if the system is currently being interactively used or not.
 
-So, to keep on the straight and narrow, all checks asks if the system is ACTIVE.
-All booleans coming from checks, will have a true value, that indicates that the system is currently considered ACTIVE.
-And a false value, indicating that the system is currently considered IDLE.
+So, to keep on the straight and narrow, all checks asks if the system is in ACTIVE state. I.e. In use by a logged in user.
+All booleans coming from checks, will, if they have a TRUE value, indicate that the system is currently considered ACTIVE.
+And if they have a FALSE value, indicating that the system is currently considered IDLE.
 
 So,
-Active = true
-Idle = false
+ACTIVE = true
+IDLE = false
