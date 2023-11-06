@@ -24,3 +24,33 @@
 SearchLoggedInInteractiveUsers
 DetermineInteractionMethod
 SummarizeInteractiveMethodsInUse
+
+
+
+# Suggestion by ChatGPT:
+
+
+
+CheckInteractiveMethod() {
+    local result=""
+
+    # Loop through each logged-in user
+    while IFS=' ' read -r user _; do
+        # Check for SSH sessions
+        if who | grep -q "^$user.*\bpts/\b"; then
+            result+="1"
+        # Check for XOrg sessions
+        elif loginctl list-sessions --no-legend | grep -q "^.* $user .*seat.*xorg"; then
+            result+="2"
+        # Check for XWayland sessions
+        elif loginctl list-sessions --no-legend | grep -q "^.* $user .*seat.*xwayland"; then
+            result+="3"
+        fi
+    done < <(who | awk '{print $1}' | sort | uniq)
+
+    echo $result
+}
+
+# Example usage:
+result=$(CheckInteractiveMethod)
+echo $result
