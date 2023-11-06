@@ -14,7 +14,11 @@
     # for 2 SSH users and 1 XWayland user
 
 
-
+# Search Logged-in users
+# Probe for interactive shell
+# Probe for open TTY
+# Probe for XOrg usage
+# Probe for XWayland usage
 
 
 SearchLoggedInInteractiveUsers

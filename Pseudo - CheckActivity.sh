@@ -36,7 +36,7 @@ foreach(character in $input.Unique){
 
 If($ResultArray -contains TRUE){
     # At least one user is active on the system.
-    # Return an TRUE, which indicates at least one user is active on the box
+    # Return an TRUE, which indicates at least one user is active, globally on the system
     return true
 }
 else {
@@ -73,6 +73,3 @@ else {
       - If none is found, FALSE is returned. 
     # Returns either TRUE or FALSE
     # TRUE for Active, FALSE for Idle
-
-
-

@@ -3,8 +3,6 @@ value type: strings
 
 
 
-
-
 MemorySegment_Activity #2 contains the ActivityTracking of the system, IdleRunner is installed on.
 # Line 1: The global summarized state across all users.
     - Value type: Bool.
